@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background: url('img1.png');
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+span {
+    background: url("https://cdn2.iconfinder.com/data/icons/icontober/64/Inkcontober_fall-256.png");
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    pointer-events: none;
+    background-size: cover;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* include animation */
+    animation: animate 8s linear;
+}
+
+
+/* animation */
+
+@keyframes animate {
+    0% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        /*to give the colour- first start from original color*/
+        filter: hue-rotate(0);
+    }
+    100% {
+        transform: translate(-50%, -5000%);
+        opacity: 0;
+        /*to give the colour- changin to variuos color start from original color*/
+        filter: hue-rotate(420deg);
+    }
+}
